@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
   const char* debug_id = argv[2];
 
   CURL* curl = curl_easy_init();
-  //TODO: check to see if this symbol file has been previously fetched.
+
   string url = kMSSymbolServer;
   url += debug_file;
   url += "/";
@@ -89,6 +89,7 @@ int main(int argc, char** argv) {
     return 1;
   }
 
+  //TODO: dump symbols from PDB
   return 0;
 }
 
